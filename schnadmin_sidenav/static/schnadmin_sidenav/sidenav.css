@@ -1,0 +1,46 @@
+
+body {color: #646464; font-size:12px; background: #fff;;}
+
+#container {background:url(bg.png) repeat-y; height:100%; min-height:100%;}
+#content {background:#fff; padding:0; margin:0px; margin-left: 0px;  height:100%; min-height:100%;}
+#footer {display:none; position:absolute;}
+/* Side-Nav
+----------------------------------------------------------- */
+
+#schnadmin-side-nav {
+    width:200px; float:left; border-right:1px solid #eee; padding-right:1px; margin-top:1px;
+    
+}
+#content.side-nav { padding-left:20px; overflow: hidden}
+#content-main {width:99%;}
+
+#schnadmin-side-nav ul {margin:0px; padding:0px 0px 0px 0px;}
+#schnadmin-side-nav ul li {list-style:none; padding:0px; margin:0px; }
+#schnadmin-side-nav ul h3 {
+    font-weight:normal; padding: 12px 12px 12px 12px; margin:0px;
+    font-size:13px; background:#fbfbfb; border-bottom:1px solid #eee; border-top:1px solid #fff;
+    color:#aaa; font-style:italic;
+    background:#7CA0C7 url(../admin/img/default-bg.gif) top repeat-x; color:#fff; 
+    opacity: 0.7;
+}
+#schnadmin-side-nav ul li ul li ul {padding-left:12px;}
+#schnadmin-side-nav ul li a {
+    background: #f5f5f5; border-bottom:1px solid #eee;  display:block;
+    padding: 10px 22px 10px 12px; line-height:1; font-size:12px; border-top:1px solid #fff;
+}
+#schnadmin-side-nav ul li a:hover {background:#eee; border-bottom-color:#ddd;}
+
+/* Hide breadcrumbs
+----------------------------------------------------------- */
+
+div.breadcrumbs {display:none;}
+
+
+#schnadmin-side-nav ul h3 {
+    background-image: -moz-linear-gradient(top, #eee, #ccc);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eee), to(#ccc));
+    background-image: -webkit-linear-gradient(top, #eee, #ccc);
+    background-image: -o-linear-gradient(top, #eee, #ccc);
+    background-image: linear-gradient(to bottom, #eee, #ccc);
+    color:#666;
+}

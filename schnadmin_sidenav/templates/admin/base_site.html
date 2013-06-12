@@ -1,0 +1,22 @@
+{% overextends "admin/base_site.html" %}
+{% load i18n %}
+
+
+
+{# TODO: This does not work WHY??? #}
+{% block bodyclass %} {{ block.super }} django-admin {% endblock %}
+
+
+
+
+
+
+
+{% block messages %}
+    {{ block.super }}
+    {% if user.is_staff and not is_popup%}
+    <div id="schnadmin-side-nav">
+        {% include "admin/nav.html" %}
+    </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% overextends "media_includes.html" %}
+
+{% block admin_css %}
+    {{ block.super }}
+    <link href="{{ STATIC_URL }}schnadmin_sidenav/sidenav.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+
+
+
+{% block admin_js %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            {% if user.is_staff %}
+            $('#content').addClass('side-nav')
+            {% endif %}
+        })
+    </script>
+{% endblock %}

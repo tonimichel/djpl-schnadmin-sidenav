@@ -1,0 +1,9 @@
+{
+    "name": "schnadmin_sidenav",
+    "version": ":git-rev:",
+    "pl": "django-productline",
+    "model_fragment": {
+        "optional": true,
+        "subfeature_of": "schnadmin"
+    }
+}
