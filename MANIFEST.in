@@ -1,0 +1,6 @@
+include README.rst
+include LICENSE
+include MANIFEST.in
+recursive-include schnadmin_sidenav/feature.json
+recursive-include schnadmin_sidenav/static *
+recursive-include schnadmin_sidenav/templates *
