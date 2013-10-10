@@ -1,22 +1,45 @@
 {% overextends "admin/base_site.html" %}
-{% load i18n %}
 
 
-
-{# TODO: This does not work WHY??? #}
-{% block bodyclass %} {{ block.super }} django-admin {% endblock %}
-
+{% block extrahead %}
+{{ block.super }}
 
 
+<script type="text/javascript">
+$(function() {
+    $(window).resize(function() {
+        update_sidenav_height()
+    })
+    var update_sidenav_height = function() {
+        $('#schnadmin-sidenav').css('height', $(window).height() + 'px')
+    }
+    update_sidenav_height()
+    
+    var url = document.location.pathname
+    url += document.location.search
+       
+    $('#schnadmin-sidenav a').each(function() {
+        if($(this).attr('href') === url) {
+            $(this).addClass('schnadmin-sidenav-current')
+        }
+    })
+    
+    
+})
+</script>
 
-
-
-
-{% block messages %}
-    {{ block.super }}
-    {% if user.is_staff and not is_popup%}
-    <div id="schnadmin-side-nav">
-        {% include "admin/nav.html" %}
-    </div>
-    {% endif %}
 {% endblock %}
+
+{% block nav-global %}
+{% if user.is_staff %}
+    <div id="schnadmin-sidenav">
+        {% block sidenav %}
+        {% endblock %}
+    </div>
+{% endif %}
+{% endblock %}
+
+
+
+
+
