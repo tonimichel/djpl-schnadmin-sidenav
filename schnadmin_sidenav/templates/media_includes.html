@@ -10,11 +10,5 @@
 
 {% block admin_js %}
     {{ block.super }}
-    <script type="text/javascript">
-        $(document).ready(function() {
-            {% if user.is_staff %}
-            $('#content').addClass('side-nav')
-            {% endif %}
-        })
-    </script>
+    <script type="text/javascript" src="{{ STATIC_URL }}schnadmin_sidenav/schnadmin.sidenav.js"></script>
 {% endblock %}
