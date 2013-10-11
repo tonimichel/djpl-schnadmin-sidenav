@@ -7,24 +7,7 @@
 
 <script type="text/javascript">
 $(function() {
-    $(window).resize(function() {
-        update_sidenav_height()
-    })
-    var update_sidenav_height = function() {
-        $('#schnadmin-sidenav').css('height', $(window).height() + 'px')
-    }
-    update_sidenav_height()
-    
-    var url = document.location.pathname
-    url += document.location.search
-       
-    $('#schnadmin-sidenav a').each(function() {
-        if($(this).attr('href') === url) {
-            $(this).addClass('schnadmin-sidenav-current')
-        }
-    })
-    
-    
+    schnadmin.sidenav.ensure_sidenav_height()  
 })
 </script>
 
