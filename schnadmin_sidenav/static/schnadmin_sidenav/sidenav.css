@@ -1,7 +1,7 @@
 
 
 body {padding-left:230px; background:#fff;}
-body.login {padding-left:0px;}
+body.login, body.popup  {padding-left:0px;}
 
 #content {border-top:1px solid #ddd; margin:0px;}
 
