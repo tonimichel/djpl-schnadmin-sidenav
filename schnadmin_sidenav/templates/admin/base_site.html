@@ -2,24 +2,21 @@
 
 
 {% block extrahead %}
-{{ block.super }}
-
-
-<script type="text/javascript">
-$(function() {
-    schnadmin.sidenav.ensure_sidenav_height()  
-})
-</script>
-
+    {{ block.super }}
+    <script type="text/javascript">
+    $(function() {
+        schnadmin.sidenav.ensure_sidenav_height()  
+    })
+    </script>
 {% endblock %}
 
 {% block nav-global %}
-{% if user.is_staff %}
-    <div id="schnadmin-sidenav">
-        {% block sidenav %}
-        {% endblock %}
-    </div>
-{% endif %}
+    {% if user.is_staff %}
+        <div id="schnadmin-sidenav">
+            {% block sidenav %}
+            {% endblock %}
+        </div>
+    {% endif %}
 {% endblock %}
 
 
