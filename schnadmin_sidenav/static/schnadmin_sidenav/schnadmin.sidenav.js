@@ -27,18 +27,19 @@ schnadmin.sidenav.ensure_sidenav_height = function() {
 *   Param ``link_db`` is a dictionary of where each key represents
 *   a certain link. The key is the data-link-id attribute of a link.
 *   The value of each key is a list of regular expressions representing the
-*   urls that need this link to be marked as valid.
+*   urls that need this link to be marked as active.
 */
 schnadmin.sidenav.update_current_link = function(link_db) {
-    
     $.each(link_db, function(key, patterns) {
         $.each(patterns, function(i, pattern) {
+            url = document.location.pathname 
+            if (window.location.search)
+                url += + '?' + window.location.search.replace( "?", "" )
             var re = new RegExp(pattern)
-            var result = re.exec(document.location.pathname)
+            var result = re.exec(url)
             if (result != null) {
                 $(schnadmin.sidenav.SELECTOR).find('a[data-link-id="' + key + '"]').addClass('schnadmin-sidenav-current')
             }
         })
     })
-
 }

@@ -5,7 +5,13 @@
     {{ block.super }}
     <script type="text/javascript">
     $(function() {
-        schnadmin.sidenav.ensure_sidenav_height()  
+        schnadmin.sidenav.ensure_sidenav_height()
+        
+        
+        $('#schnadmin-sidenav h2').click(function() {
+            $(this).next().toggle('blind')
+        })
+        
     })
     </script>
 {% endblock %}

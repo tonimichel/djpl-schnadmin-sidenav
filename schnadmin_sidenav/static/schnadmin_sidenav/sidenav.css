@@ -14,12 +14,20 @@ div.breadcrumbs {margin-left:22px; padding-left:0px; background:transparent; pos
 #schnadmin-sidenav {width:230px; position:fixed; left:0; top:0px; background: #666; height:800px;}
 
 #schnadmin-sidenav a {
-    padding:22px; display:block; border-bottom:1px solid #555; border-top:1px solid #777;
-    color:#ccc !important; font-size:15px; cursor:pointer;
+    padding:18px 22px 18px 12px; display:block; border-bottom:1px solid #555; border-top:1px solid #777;
+    cursor:pointer;
+    color:#eee !important; font-size:15px;
 }
+
+#schnadmin-sidenav  i.fa {color:#bbb; margin-right:6px;}
+#schnadmin-sidenav a.schnadmin-sidenav-current i.fa {color:#fff;}
+
+
+
+
 #schnadmin-sidenav a:hover {text-decoration:none !important; color:#ddd; background-color:#777; border-top:1px solid #888;}
-#schnadmin-sidenav a.schnadmin-sidenav-sub {padding: 12px 12px 12px 44px; border:0px;}
-#schnadmin-sidenav a.schnadmin-sidenav-sub:hover {border:0px;}
+
+
 #schnadmin-sidenav a.schnadmin-sidenav-current {
     background-color: #5BB75B;
     color: #fff !important;
@@ -32,3 +40,14 @@ div.breadcrumbs {margin-left:22px; padding-left:0px; background:transparent; pos
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff96c221', endColorstr='#ff7ca217', GradientType=0);
  }
+ 
+/*  schnadmin sidenav section
+------------------------------------------------*/
+
+    #schnadmin-sidenav h2{
+        cursor:pointer;
+        padding:18px 22px 18px 12px; color:#eee; font-size:15px; border-bottom:1px solid #555; border-top:1px solid #777;
+    }
+    .schnadmin-sidenav-section a {padding: 10px 22px 10px 12px !important; background:#6e6e6e; border-top: 1px solid #888; font-size:14px !important; 
+        margin-left: 18px;
+    }
