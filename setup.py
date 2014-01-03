@@ -17,7 +17,7 @@ setup(
     keywords='django, django-productline, admin theme, django admin, djpl-schnadmin, schnadmin',
     author='Toni Michel',
     author_email='toni@schnapptack.de',
-    url="https://github.com/tonimcihel/djpl-schnadmin-sidenav",
+    url="https://github.com/tonimichel/djpl-schnadmin-sidenav",
     packages=find_packages(),
     package_dir={'schnadmin_sidenav': 'schnadmin_sidenav'},
     include_package_data=True,
