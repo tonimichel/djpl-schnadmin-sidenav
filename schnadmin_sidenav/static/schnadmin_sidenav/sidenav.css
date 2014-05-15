@@ -3,13 +3,20 @@
 body {padding-left:230px; background:#fff;}
 body.login, body.popup  {padding-left:0px;}
 
-#content { margin:0px;}
+/*reset shadows*/
+#content { margin:0px;	-webkit-box-shadow: none;	-moz-box-shadow: none;	box-shadow: none;}
 
 #branding {display:none;}
 a#logo {display:none;}
 
-/* move breadcrumbs in horizontal bar (user-tools) */
-div.breadcrumbs {margin-left:22px; padding-left:0px; background:transparent; position:absolute; top:0px;}
+/* move breadcrumbs in horizontal bar (user-tools); reset shadows */
+div.breadcrumbs {margin-left:22px; padding-left:0px; background:transparent; position:absolute; top:0px;
+    	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+
 
 #schnadmin-sidenav {width:230px; position:fixed; left:0; top:0px; background: #666; height:800px;}
 
