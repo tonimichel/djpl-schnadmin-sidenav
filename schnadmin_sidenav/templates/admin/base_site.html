@@ -1,5 +1,6 @@
 {% overextends "admin/base_site.html" %}
 
+{% block bodyclass %}{{ block.super }} schnadmin-sidenav {% endblock %}
 
 {% block extrahead %}
     {{ block.super }}
